@@ -1,0 +1,34 @@
+# PEP 621 project metadata
+[project]
+name = "todo-list-tk"
+version = "0.1.0"
+description = "A clean, extensible desktop To‑Do app built with Tkinter"
+readme = "README.md"
+authors = [{ name = "Mobin Yousefi", email = "" }]
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/mobinyousefi-cs/todo-list-tk"
+Repository = "https://github.com/mobinyousefi-cs/todo-list-tk"
+
+[project.scripts]
+"todo-list-tk" = "todo_list_tk.main:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.black]
+line-length = 100
